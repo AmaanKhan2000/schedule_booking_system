@@ -1,0 +1,105 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #ffffff;
+  background-size: cover;
+}
+
+.about{
+  margin-top: 50px;
+  margin-right: 20px;
+  margin-left: 100px;
+}
+
+.login-box{
+  text-align: center;
+  width: 500px;
+  margin-top:50px;
+  margin-left: 100px;
+  background-color: #333333;
+  padding: 30px 40px;
+  border-radius: 10px;
+  color: white;
+  z-index: 2;
+  
+}
+.login-box h1{
+  float: left;
+  font-size: 40px;
+  border-bottom: 6px solid #4caf50;
+  margin-bottom: 50px;
+  padding: 13px 0;
+}
+.textbox{
+  width: 100%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 8px 0;
+  margin: 8px 0;
+  border-bottom: 1px solid #4caf50;
+}
+.textbox i{
+  width: 26px;
+  float: left;
+  text-align: center;
+}
+.textbox input{
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  font-size: 18px;
+  width: 80%;
+  float: left;
+  margin: 0 10px;
+}
+$color: #4caf50;
+
+.buttn {
+  display: inline-block;
+  cursor: pointer;
+  padding: .75rem 1.25rem;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: .9rem;
+  letter-spacing: .10rem;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color;
+    border-radius: 10rem;
+    z-index: -2;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: darken($color, 15%);
+    transition: all .3s;
+    border-radius: 10rem;
+    z-index: -1;
+  }
+  &:hover {
+    color: #fff;
+    &:before {
+      width: 100%;
+    }
+  }
+}
